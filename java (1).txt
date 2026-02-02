@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+
+  - name: Install java package
+    yum: name={{ item }}
+    with_items:
+      - java
